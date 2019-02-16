@@ -21,4 +21,17 @@ export class MonkeysComponent implements OnInit {
       .getMonkeys()
       .subscribe(monkeys => (this.monkeys = monkeys));
   }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) return;
+    this.monkeyService.addMonkey({ name } as Monkey).subscribe(monkey => {
+      this.monkeys.push(monkey);
+    });
+  }
+
+  delete(monkey: Monkey): void{
+    this.monkeys = this.monkeys.filter(item => item !== monkey);
+    this.monkeyService.deleteMonkey(monkey).subscribe();
+  }
 }

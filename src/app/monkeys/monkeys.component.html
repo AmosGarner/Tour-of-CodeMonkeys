@@ -1,8 +1,21 @@
 <h2>Code Monkeys:</h2>
+
+<div>
+  <label>Code Monkey:
+    <input #monkeyName />
+  </label>
+  <button (click)="add(monkeyName.value); monkeyName.value = ''">
+    add
+  </button>
+</div>
+
 <ul class="monkeys">
   <li *ngFor="let monkey of monkeys">
     <a routerLink="/detail/{{ monkey.id }}">
       <span class="badge">{{ monkey.id }}</span>{{ monkey.name }}
     </a>
+    <button class="delete" title="delete monkey"(click)="delete(monkey)">
+      x
+    </button>
   </li>
 </ul>
