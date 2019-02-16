@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Monkey } from "../models/monkey";
-import { MessageService } from "../services/message.service";
 import { MonkeyService } from "../services/monkey.service";
-import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-monkeys",
@@ -12,12 +10,12 @@ import { Observable } from 'rxjs';
 export class MonkeysComponent implements OnInit {
   monkeys: Monkey[];
 
-  constructor(
-    private monkeyService: MonkeyService
-  ) {}
+  constructor(private monkeyService: MonkeyService) {}
+
   ngOnInit() {
     this.getMonkeys();
   }
+
   getMonkeys(): void {
     this.monkeyService
       .getMonkeys()
