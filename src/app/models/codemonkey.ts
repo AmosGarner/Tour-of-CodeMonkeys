@@ -1,4 +1,4 @@
-export class CodeMonkey{
+export class CodeMonkey {
   id: number;
   name: string;
 }

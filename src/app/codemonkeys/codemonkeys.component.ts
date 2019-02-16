@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { CodeMonkey } from "../models/codemonkey";
+import { MONKEYS } from "../data/mock-monkeys";
 
 @Component({
   selector: "app-codemonkeys",
@@ -7,10 +8,11 @@ import { CodeMonkey } from "../models/codemonkey";
   styleUrls: ["./codemonkeys.component.css"]
 })
 export class CodemonkeysComponent implements OnInit {
-  codeMonkey: CodeMonkey = {
-    id: 1,
-    name: "Amos"
-  };
+  monkeys = MONKEYS;
+  selectedMonkey: CodeMonkey;
+  onSelect(monkey: CodeMonkey): void {
+    this.selectedMonkey = monkey;
+  }
 
   constructor() {}
   ngOnInit() {}
