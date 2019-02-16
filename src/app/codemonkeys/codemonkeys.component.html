@@ -1,14 +1,3 @@
-<div *ngIf="selectedMonkey">
-  <h2>{{ selectedMonkey.name | uppercase }}'s Details</h2>
-  <div><span>id: </span>{{ selectedMonkey.id }}</div>
-  <div>
-    <label
-      >name:
-      <input [(ngModel)]="selectedMonkey.name" placeholder="name" />
-    </label>
-  </div>
-</div>
-
 <h2>Code Monkeys:</h2>
 <ul class="monkeys">
   <li
@@ -19,3 +8,5 @@
     <span class="badge">{{ monkey.id }}</span> {{ monkey.name }}
   </li>
 </ul>
+
+<app-monkey-detail [monkey]="selectedMonkey"></app-monkey-detail>
