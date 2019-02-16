@@ -61,6 +61,15 @@ export class MonkeyService {
     );
   }
 
+  searchMonkeys(term: string): Observable<Monkey[]> {
+    if (!term.trim()) return of([]);
+    
+    return this.http.get<Monkey[]>(`${this.monkeysURL}/?name=${term}`).pipe(
+      tap(_ => this.log(`found code monkeys matching "${term}"`)),
+      catchError(this.handleError<Monkey[]>('searchMonkeys', []))
+    );
+  }
+
   private log(message: string) {
     this.messageService.add(`MonkeyService: ${message}`);
   }
