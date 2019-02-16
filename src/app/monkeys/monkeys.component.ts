@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Monkey } from "../models/monkey";
 import { MessageService } from "../services/message.service";
 import { MonkeyService } from "../services/monkey.service";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-monkeys",
@@ -9,21 +10,15 @@ import { MonkeyService } from "../services/monkey.service";
   styleUrls: ["./monkeys.component.css"]
 })
 export class MonkeysComponent implements OnInit {
-  selectedMonkey: Monkey;
   monkeys: Monkey[];
 
   constructor(
-    private monkeyService: MonkeyService,
-    private messageService: MessageService
+    private monkeyService: MonkeyService
   ) {}
   ngOnInit() {
     this.getMonkeys();
   }
-  onSelect(monkey: Monkey): void {
-    this.selectedMonkey = monkey;
-  }
   getMonkeys(): void {
-    this.messageService.add('HeroService: fetched heroes');
     this.monkeyService
       .getMonkeys()
       .subscribe(monkeys => (this.monkeys = monkeys));

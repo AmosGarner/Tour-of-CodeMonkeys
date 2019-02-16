@@ -1,0 +1,12 @@
+<h3>Top Code Monkeys</h3>
+<div class="grid grid-pad">
+  <a
+    *ngFor="let monkey of monkeys"
+    class="col-1-4"
+    routerLink="/detail/{{ monkey.id }}"
+  >
+    <div class="module monkey">
+      <h4>{{ monkey.name }}</h4>
+    </div>
+  </a>
+</div>

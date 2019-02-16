@@ -1,12 +1,8 @@
 <h2>Code Monkeys:</h2>
 <ul class="monkeys">
-  <li
-    *ngFor="let monkey of monkeys"
-    (click)="onSelect(monkey)"
-    [class.selected]="monkey === selectedMonkey"
-  >
-    <span class="badge">{{ monkey.id }}</span> {{ monkey.name }}
+  <li *ngFor="let monkey of monkeys">
+    <a routerLink="/detail/{{ monkey.id }}">
+      <span class="badge">{{ monkey.id }}</span>{{ monkey.name }}
+    </a>
   </li>
 </ul>
-
-<app-monkey-detail [monkey]="selectedMonkey"></app-monkey-detail>
