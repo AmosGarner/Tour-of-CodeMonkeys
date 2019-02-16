@@ -3,11 +3,17 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { CodemonkeysComponent } from "./codemonkeys/codemonkeys.component";
-import { MonkeyDetailComponent } from './monkey-detail/monkey-detail.component';
+import { MonkeyDetailComponent } from "./monkey-detail/monkey-detail.component";
+import { MessagesComponent } from "./messages/messages.component";
+import { MonkeysComponent } from './monkeys/monkeys';
 
 @NgModule({
-  declarations: [AppComponent, CodemonkeysComponent, MonkeyDetailComponent],
+  declarations: [
+    AppComponent,
+    MonkeysComponent,
+    MonkeyDetailComponent,
+    MessagesComponent
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

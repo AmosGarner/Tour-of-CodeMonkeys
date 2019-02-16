@@ -1,6 +1,6 @@
-import { CodeMonkey } from "../models/codemonkey";
+import { Monkey } from '../models/monkey';
 
-export const MONKEYS: CodeMonkey[] = [
+export const MONKEYS: Monkey[] = [
   { id: 1, name: "Amos" },
   { id: 2, name: "David" },
   { id: 3, name: "Henry" },

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { CodeMonkey } from "../models/codemonkey";
+import { Monkey } from '../models/monkey';
 
 @Component({
   selector: "app-monkey-detail",
@@ -8,7 +8,7 @@ import { CodeMonkey } from "../models/codemonkey";
 })
 
 export class MonkeyDetailComponent implements OnInit {
-  @Input() monkey: CodeMonkey;
+  @Input() monkey: Monkey;
   constructor() {}
   ngOnInit() {}
 }
