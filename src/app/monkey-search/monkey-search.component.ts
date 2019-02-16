@@ -6,11 +6,11 @@ import { MonkeyService } from '../services/monkey.service';
 
 
 @Component({
-  selector: "app-hero-search",
-  templateUrl: "./hero-search.component.html",
-  styleUrls: ["./hero-search.component.css"]
+  selector: "app-monkey-search",
+  templateUrl: "./monkey-search.component.html",
+  styleUrls: ["./monkey-search.component.css"]
 })
-export class HeroSearchComponent implements OnInit {
+export class MonkeySearchComponent implements OnInit {
   monkeys$: Observable<Monkey[]>;
   private searchTerms = new Subject<string>();
 

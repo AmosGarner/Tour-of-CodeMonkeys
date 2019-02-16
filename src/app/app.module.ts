@@ -12,7 +12,7 @@ import { MessagesComponent } from "./messages/messages.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
-import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { MonkeySearchComponent } from './monkey-search/monkey-search.component';
 
 @NgModule({
   imports: [
@@ -30,7 +30,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     MonkeysComponent,
     MonkeyDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    MonkeySearchComponent
   ],
   bootstrap: [AppComponent]
 })

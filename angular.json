@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tour-of-heros": {
+    "tour-of-codemonkeys": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tour-of-heros",
+            "outputPath": "dist/tour-of-codemonkeys",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tour-of-heros:build"
+            "browserTarget": "tour-of-codemonkeys:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tour-of-heros:build:production"
+              "browserTarget": "tour-of-codemonkeys:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tour-of-heros:build"
+            "browserTarget": "tour-of-codemonkeys:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "tour-of-heros-e2e": {
+    "tour-of-codemonkeys-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tour-of-heros:serve"
+            "devServerTarget": "tour-of-codemonkeys:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tour-of-heros:serve:production"
+              "devServerTarget": "tour-of-codemonkeys:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "tour-of-heros"
+  "defaultProject": "tour-of-codemonkeys"
 }
